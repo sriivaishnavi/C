@@ -1,0 +1,40 @@
+#include<stdio.h>
+void prime(int, int);
+int checkprime(int)
+void main()
+{
+int lower, upper;
+printf("Enter a value for lower limit");
+scanf("%d",&lower);
+printf("Enter a value for upper limit");
+scanf("%d",&upper);
+prime(lower,upper);
+} 
+
+void prime(int l, int u)
+{
+int c;
+for(int i=l;i<=u;i++)
+{
+c = checkprime(i); 
+if(c==0)
+{
+printf("%d",i);
+}
+}
+}
+int checkprime(int n)
+{
+int c=0;
+for(int i = 1 ; i<=n;i++)
+{
+if(n%i == 0)
+{
+c++;
+}
+}
+if(c==2)
+return 0;
+else
+return 1;
+}
